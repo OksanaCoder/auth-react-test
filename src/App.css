@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.container-main {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+    width: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading {
+    font-size: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.flex-style {
+    display: flex;
+    justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.primary-color {
+    color: #316FEA;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondary-color {
+    color : #BEC5CC;
+}
+.form {
+    width: 400px;
+}
+.auth-btn {
+    width: 48%;
+    border: 1px solid #D3D8DC !important;
+    background: none !important;
+}
+.small-text {
+    font-size: 12px;
+}
+.font-button {
+    font-size: 16px;
+}
+.form-label {
+    font-size: 15px;
+}
+.form-control {
+    font-weight: 200 !important;
+    font-size: 15px !important;
+}
+.align-right {
+    text-align: right;
+}
+.btn-transparent {
+    border: 1px solid #D3D8DC !important;
+    background: none !important;
 }
