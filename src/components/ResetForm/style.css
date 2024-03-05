@@ -1,0 +1,9 @@
+.status-pass {
+    width: 20px;
+    right: 20px;
+    top: 10px;
+    position: absolute;
+}
+.relative-box {
+    position: relative;
+}

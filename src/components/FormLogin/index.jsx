@@ -29,8 +29,8 @@ const FormLogin = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Control type="password" placeholder="Password" />
+
               <a
-                href="/forgot"
                 onClick={handleForgot}
                 className="primary-color align-right small-text text-decoration-none"
               >

@@ -1,9 +1,0 @@
-.line-style::before 
-.line-style::after {
-    display: inline-block;
-    content: "";
-    border-top: .3rem solid rgb(148, 148, 148);
-    width: 4rem;
-    margin: 0 1rem;
-    transform: translateY(-1rem);
-}
