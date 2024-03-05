@@ -27,12 +27,15 @@ const FormLogin = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Work email" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group
+              className="mb-3 align-right"
+              controlId="formBasicPassword"
+            >
               <Form.Control type="password" placeholder="Password" />
 
               <a
                 onClick={handleForgot}
-                className="primary-color align-right small-text text-decoration-none"
+                className="primary-color small-text text-decoration-none"
               >
                 Forgot password ?
               </a>

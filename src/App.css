@@ -50,3 +50,8 @@
     border: 1px solid #D3D8DC !important;
     background: none !important;
 }
+@media screen and (max-width: 600px) {
+    .container-main {
+        padding: 60px;
+    }
+}

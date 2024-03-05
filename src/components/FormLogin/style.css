@@ -1,0 +1,21 @@
+.line-style {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #E3E6E9;
+}
+
+.line-style::before,
+.line-style::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #E3E6E9;
+}
+
+.line-style:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.line-style:not(:empty)::after {
+  margin-left: .25em;
+}
