@@ -1,14 +1,31 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import ResetForm from "../ResetForm";
-// import { useHistory } from "react-router-dom";
+import { resetPassword } from "../../api/api.js";
 
 const ForgotPasswordForm = () => {
-  //   const history = useHistory();
   const [reseted, setReset] = useState(false);
-  const handleReset = (e) => {
+  const [email, setEmail] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(true);
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleBlur = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    setIsValidEmail(emailRegex.test(email));
+  };
+  const handleReset = async (e) => {
     e.preventDefault();
     setReset(true);
+    try {
+      await resetPassword(email);
+      console.log("Password reset request submitted successfully.");
+    } catch (error) {
+      console.error("Password reset failed:", error.message);
+    }
   };
   const goBack = () => {
     // history.back();
@@ -21,7 +38,21 @@ const ForgotPasswordForm = () => {
         <Form className="form">
           <h1 className="heading my-4 text-center">Forgot Password ?</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter your email" />
+            <Form.Control
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {!isValidEmail && (
+              <p
+                className="small-text my-2 align-right"
+                style={{ color: "red" }}
+              >
+                Invalid email address
+              </p>
+            )}
           </Form.Group>
           <Button variant="primary w-100 font-button" onClick={handleReset}>
             Send
