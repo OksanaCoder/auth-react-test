@@ -28,8 +28,9 @@ const ForgotPasswordForm = () => {
     }
   };
   const goBack = () => {
-    // history.back();
+    window.history.back();
   };
+
   return (
     <>
       {reseted ? (
