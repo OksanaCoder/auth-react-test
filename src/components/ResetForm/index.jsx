@@ -62,6 +62,7 @@ const ResetForm = () => {
             title={showPassword ? "Hide password" : "Show password"}
             src={showPassword ? hidePass : showPass}
             onClick={() => setShowPassword((prevState) => !prevState)}
+            alt="hide"
           />
         </div>
         {!isValidPassword && (
@@ -89,6 +90,7 @@ const ResetForm = () => {
             title={showConfirmedPassword ? "Hide password" : "Show password"}
             src={showConfirmedPassword ? hidePass : showPass}
             onClick={() => setShowConfirmedPassword((prevState) => !prevState)}
+            alt="hide"
           />
         </div>
         {!isValidPassword && (
