@@ -91,6 +91,7 @@ const FormLogin = () => {
               )}
 
               <a
+                href="/"
                 onClick={handleForgot}
                 className="primary-color small-text text-decoration-none"
               >
